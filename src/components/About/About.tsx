@@ -33,12 +33,6 @@ export default function About() {
                 {education.institution} · {education.period}
               </p>
             </div>
-            <div className={styles.card}>
-              <p className={styles.cardLabel}>availability</p>
-              <p className={styles.cardValue}>
-                <span className={styles.dotLive} /> Open to conversations
-              </p>
-            </div>
           </aside>
         </div>
       </div>

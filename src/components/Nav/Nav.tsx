@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import styles from './Nav.module.scss';
+import Logo from '@/components/Logo/Logo';
 
 const sections = [
-  { id: 'about', label: 'about' },
-  { id: 'stack', label: 'stack' },
-  { id: 'projects', label: 'projects' },
-  { id: 'experience', label: 'experience' },
-  { id: 'contact', label: 'contact' },
+  { id: 'about', label: 'About' },
+  { id: 'stack', label: 'Stack' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 export default function Nav() {
@@ -25,31 +26,19 @@ export default function Nav() {
   return (
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <a href="#top" className={styles.logo}>
-          <span className={styles.logoBracket}>{'{'}</span>
-          <span className={styles.logoText}>ivan.dev</span>
-          <span className={styles.logoBracket}>{'}'}</span>
-        </a>
+        <Logo variant="nav" />
 
         <nav className={`${styles.links} ${open ? styles.open : ''}`}>
-          {sections.map((s, i) => (
+          {sections.map((s) => (
             <a
               key={s.id}
               href={`#${s.id}`}
               className={styles.link}
               onClick={() => setOpen(false)}
             >
-              <span className={styles.linkIndex}>0{i + 1}.</span> {s.label}
+              {s.label}
             </a>
           ))}
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.cta}
-          >
-            LinkedIn →
-          </a>
         </nav>
 
         <button

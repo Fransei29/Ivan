@@ -6,14 +6,14 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 1.25rem 0;
+  padding: 1.85rem 0;
   transition: all 0.3s ease;
 
   &.scrolled {
     background: rgba(10, 18, 32, 0.75);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid $border;
-    padding: 0.85rem 0;
+    padding: 1.35rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
 }
@@ -29,29 +29,6 @@
   @include mobile {
     padding: 0 1.25rem;
   }
-}
-
-.logo {
-  font-family: $font-mono;
-  font-weight: 600;
-  font-size: 1.1rem;
-  display: flex;
-  gap: 2px;
-  transition: transform 0.2s ease;
-
-  &:hover { transform: scale(1.05); }
-}
-
-.logoBracket {
-  color: $accent;
-  font-weight: 700;
-}
-
-.logoText {
-  background: $grad-primary;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .links {
@@ -80,9 +57,11 @@
 }
 
 .link {
-  font-family: $font-mono;
-  font-size: 0.9rem;
+  font-family: $font-sans;
+  font-size: 0.92rem;
+  font-weight: 500;
   color: $text-muted;
+  letter-spacing: -0.005em;
   transition: color 0.2s ease;
   position: relative;
 
@@ -101,27 +80,6 @@
   }
 
   &:hover::after { width: 100%; }
-}
-
-.linkIndex {
-  color: $accent;
-  font-size: 0.78rem;
-}
-
-.cta {
-  font-family: $font-mono;
-  font-size: 0.88rem;
-  padding: 0.6rem 1.2rem;
-  border: 1.5px solid $accent;
-  border-radius: $radius-sm;
-  color: $accent;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background: rgba(0, 180, 255, 0.12);
-    box-shadow: $shadow-glow;
-    transform: translateY(-2px);
-  }
 }
 
 .burger {

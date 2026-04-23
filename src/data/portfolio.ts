@@ -38,26 +38,33 @@ export const highlights = [
 ];
 
 export const stack = [
+  // Frontend (5)
   { name: 'React', category: 'Frontend' },
   { name: 'Next.js', category: 'Frontend' },
-  { name: 'TypeScript', category: 'Language' },
+  { name: 'TypeScript', category: 'Frontend' },
+  { name: 'SCSS', category: 'Frontend' },
+  { name: 'Gatsby', category: 'Frontend' },
+
+  // Backend (5)
   { name: 'Node.js', category: 'Backend' },
   { name: 'NestJS', category: 'Backend' },
   { name: 'GraphQL', category: 'Backend' },
-  { name: 'PostgreSQL', category: 'Database' },
-  { name: 'TypeORM', category: 'Database' },
-  { name: 'Prisma', category: 'Database' },
-  { name: 'Redis', category: 'Database' },
-  { name: 'Firestore', category: 'Database' },
-  { name: 'AWS', category: 'Infra' },
-  { name: 'Docker', category: 'Infra' },
-  { name: 'Linux', category: 'Infra' },
-  { name: 'CI/CD', category: 'Infra' },
-  { name: 'Cloudflare', category: 'Infra' },
-  { name: 'Keycloak', category: 'Infra' },
-  { name: 'Stripe', category: 'Integrations' },
-  { name: 'Twilio', category: 'Integrations' },
-  { name: 'Postmark', category: 'Integrations' },
+  { name: 'BullMQ', category: 'Backend' },
+  { name: 'Keycloak', category: 'Backend' },
+
+  // Data (5)
+  { name: 'PostgreSQL', category: 'Data' },
+  { name: 'Prisma', category: 'Data' },
+  { name: 'TypeORM', category: 'Data' },
+  { name: 'Redis', category: 'Data' },
+  { name: 'Firestore', category: 'Data' },
+
+  // Infra & Integrations (5)
+  { name: 'AWS', category: 'Infra & Integrations' },
+  { name: 'Docker', category: 'Infra & Integrations' },
+  { name: 'Stripe', category: 'Infra & Integrations' },
+  { name: 'Twilio', category: 'Infra & Integrations' },
+  { name: 'Cloudflare', category: 'Infra & Integrations' },
 ];
 
 export type Experience = {

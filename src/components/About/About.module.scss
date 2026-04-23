@@ -56,12 +56,22 @@
 }
 
 .aside {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 0.85rem;
+  align-items: flex-end;
   align-content: start;
 
-  @include mobile { grid-template-columns: 1fr; }
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  @include mobile {
+    align-items: stretch;
+
+    .card { max-width: none; }
+  }
 }
 
 .card {
