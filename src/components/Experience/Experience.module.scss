@@ -1,0 +1,235 @@
+@import '../../styles/variables';
+
+.experience {
+  padding: 6rem 0;
+
+  @include mobile { padding: 4rem 0; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include mobile { padding: 0 1.25rem; }
+}
+
+.kicker {
+  font-family: $font-mono;
+  font-size: 0.88rem;
+  color: $accent;
+  margin-bottom: 0.75rem;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  background: linear-gradient(180deg, #ffffff 0%, #b6d6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: sticky;
+  top: 90px;
+  align-self: start;
+
+  @include tablet {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-family: $font-mono;
+  color: $text-muted;
+  border-radius: $radius;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(19, 30, 53, 0.55);
+    color: $text;
+  }
+
+  &.active {
+    background: rgba(0, 180, 255, 0.1);
+    border-color: rgba(0, 180, 255, 0.35);
+    color: $accent;
+
+    .tabMark {
+      background: $accent;
+      box-shadow: 0 0 10px $accent;
+    }
+  }
+}
+
+.tabMark {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $text-dim;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.tabText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.tabCompany {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabPeriod {
+  font-size: 0.75rem;
+  color: $text-dim;
+}
+
+.panel {
+  padding: 2rem;
+  background: rgba(19, 30, 53, 0.5);
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  animation: fadeInUp 0.4s ease-out;
+
+  @include mobile { padding: 1.5rem; }
+}
+
+.panelHeader {
+  margin-bottom: 1.5rem;
+}
+
+.role {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: $text;
+  margin-bottom: 0.35rem;
+}
+
+.at { color: $accent; }
+
+.meta {
+  font-family: $font-mono;
+  font-size: 0.85rem;
+  color: $text-dim;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.dotSep { color: $accent; }
+
+.description {
+  font-size: 0.98rem;
+  color: $text-muted;
+  line-height: 1.7;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+
+  li {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.94rem;
+    color: $text-muted;
+    line-height: 1.65;
+  }
+}
+
+.bulletIcon {
+  color: $accent;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.project {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed $border-strong;
+}
+
+.projectHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.projectName {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: $text;
+}
+
+.projectDuration {
+  font-family: $font-mono;
+  font-size: 0.78rem;
+  color: $accent;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid rgba(0, 180, 255, 0.3);
+  border-radius: $radius-sm;
+}
+
+.projectSummary {
+  font-size: 0.9rem;
+  color: $text-muted;
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(0, 180, 255, 0.08);
+  border: 1px solid rgba(0, 180, 255, 0.25);
+  border-radius: $radius-sm;
+  color: $accent;
+}
